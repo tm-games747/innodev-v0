@@ -45,5 +45,7 @@
 		"yaml": "^2.5.0",
 		"yaml-js": "^0.3.1",
 		"yargs": "^17.7.2"
-	}
+	},
+	"name": "innodev-v0",
+	"description": "Innovate hub by boss marc"
 }

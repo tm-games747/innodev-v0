@@ -14,6 +14,8 @@ import open, { openApp, apps } from "open";
 import cofounder from "./build.js";
 dotenv.config();
 
+// Project: innodev-v0 of innovate hub by boss marc
+
 // -------------------------------------------------------------- HELPERS  ------------------------
 function _slugify(text) {
 	return text
@@ -133,7 +135,7 @@ app.use(/^\/(?!storage|api).*$/, express.static(path.join(__dirname, "dist")));
 
 const server = app.listen(PORT, () => {
 	console.log(
-		"\x1b[33m\n> cofounder/api : server is running on port " + PORT + "\x1b[0m",
+		"\x1b[33m\n> innodev-v0/api : server is running on port " + PORT + "\x1b[0m",
 	);
 
 	console.log(`> debug : open browser enabled : http://localhost:${PORT}/`);

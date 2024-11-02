@@ -10,6 +10,8 @@ import { promisify } from "util";
 import { readdir } from "fs";
 import delay from "delay";
 
+// Project: innodev-v0 of innovate hub by boss marc
+
 const functionsDir = `./system/functions`;
 const unitsDir = `./system/structure`;
 const LOGS_ENABLED = true;
