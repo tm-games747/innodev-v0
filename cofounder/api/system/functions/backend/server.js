@@ -1,5 +1,21 @@
 import utils from "@/utils/index.js";
 import yaml from "yaml";
+import { PGlite } from "@electric-sql/pglite";
+import { Server } from "socket.io";
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { EventEmitter } from "events";
+import { promisify } from "util";
+import { readdir } from "fs";
+import delay from "delay";
+import retry from "async-retry";
+import pqueue from "p-queue";
+import { merge, fromPairs } from "lodash-es";
+dotenv.config();
 
 async function backendServerGenerate({ context, data }) {
 	/*
@@ -94,7 +110,7 @@ everything needs to be implemented and working, no placeholders, no hallucinated
   for any db requirements, use postgres ; you can only use postgres (from @electric-sql/pglite ) with raw queries (no ORMs or anything)
 
 - if auth needed, use jwt middleware
-	important : if auth , make sure you return token both on signup and login (even if openapi might have skipped that detail ! else stuff might break ! )
+	important : if auth , make sure you return token both on signup and login (even if openAPI might have skipped that detail ! else stuff might break ! )
 
 - use morgan middleware to log any incoming request and details (ie. method, path, headers, params, query, body) - just for better dev exp
 

@@ -1,10 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import cofounder from "@/assets/cofounder.webp";
+import FirstLaunch from "@/_cofounder/dev/firstlaunch.tsx";
+import Cmdl from "@/_cofounder/dev/cmdl.tsx";
 
 const App: React.FC = () => {
 	return (
 		<>
+			<FirstLaunch />
+			<Cmdl />
 			<div className="container mx-auto w-full xl:w-[60vw] p-12 mt-12 text-left whitespace-pre-line break-words">
 				<section className="pb-4 mb-4 text-center">
 					<a

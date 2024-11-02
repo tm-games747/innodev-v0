@@ -130,6 +130,7 @@ async function extractCodeDecorators({ code }) {
 
 	return decorators;
 }
+
 export default {
 	extract: {
 		backticks: extractBackticks,

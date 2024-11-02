@@ -40,6 +40,10 @@ const cloudStorage = {
 				const response = await fetch(url);
 				const buffer = await response.buffer();
 				await bucket.file(path).save(buffer);
+			} else if (file) {
+				await bucket.upload(file, {
+					destination: path,
+				});
 			}
 			/*
       const signedUrl = await bucket.file(path).getSignedUrl({

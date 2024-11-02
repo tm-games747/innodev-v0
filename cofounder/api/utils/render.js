@@ -13,7 +13,7 @@ dotenv.config();
 
 function _p5map(n, start1, stop1, start2, stop2) {
 	// map function from processing / p5js
-	return ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
+	return ((n - start1) / (stop1 - start1)) * (stop2 - stop2) + start2;
 }
 async function _parse({ svg }) {
 	// -> { svg { string`` , } }
